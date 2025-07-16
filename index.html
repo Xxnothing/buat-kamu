@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Kenangan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #ffc0cb, #fff0f5);
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #d63384;
+    }
+    .envelope-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .envelope {
+      width: 150px;
+      height: 100px;
+      background: #ffb6c1;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+    .envelope:before, .envelope:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 50px 75px;
+      border-color: transparent transparent #ffc0cb transparent;
+      top: -50px;
+      left: 0;
+    }
+    .envelope:hover {
+      background-color: #ffa6c9;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    .letter {
+      display: none;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff0f5;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .gallery, .videos {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .videos iframe {
+      width: 100%;
+      max-width: 480px;
+      height: 270px;
+      margin: 1rem;
+      border: none;
+      border-radius: 10px;
+    }
+    audio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>Untuk Segalanya yang Telah Berlalu</header>
+
+  <div class="envelope-container">
+    <div class="envelope" onclick="showLetter()" title="Klik untuk membuka surat"></div>
+  </div>
+
+  <div class="letter" id="letter">
+    <p>Untuk kamu yang pernah jadi segalanya…</p>
+    <p>Terima kasih sudah hadir dalam bagian paling indah dalam hidupku. 
+    Setiap tawa, pelukan, dan kenangan yang kita ciptakan akan selalu hidup di hatiku.
+    Walau langkah kita kini berpisah, namamu akan selalu kuucapkan dalam doa-doa panjangku.</p>
+    <p>Selamat melangkah, cinta.<br/>
+    Aku selalu mengingatmu — bukan dengan luka, tapi dengan senyuman.</p>
+    <p>Dari aku, yang mencintaimu dengan segenap waktu yang pernah ada.</p>
+  </div>
+
+  <div class="gallery">
+    <h2>Galeri Foto</h2>
+    <img src="foto1.jpg" alt="Foto Kenangan 1"/>
+    <img src="foto2.jpg" alt="Foto Kenangan 2"/>
+    <img src="foto3.jpg" alt="Foto Kenangan 3"/>
+    <img src="foto4.jpg" alt="Foto Kenangan 4"/>
+    <img src="foto5.jpg" alt="Foto Kenangan 5"/>
+    <img src="foto6.jpg" alt="Foto Kenangan 6"/>
+    <img src="foto7.jpg" alt="Foto Kenangan 7"/>
+    <img src="foto8.jpg" alt="Foto Kenangan 8"/>
+  </div>
+
+  <div class="videos">
+    <h2>Video Kenangan</h2>
+    <iframe src="https://drive.google.com/file/d/19c3WIwhJvkBocEVRKlN-XxIMDhzo2IJ5/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/19XwBe7wSqhicYvRNH6bmtN4LiSdUqqr0/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/19A0rElArAaWOBzB-FnaMGJPJB1bMD2Za/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/19yUKZt3CQVTn8OyPyULvGmP0bll6XT02/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/19VeD-l7JAWU9yLuFK9JCnXgJlEyUQul8/preview"></iframe>
+    <iframe src="https://drive.google.com/file/d/19PtcDe_O3cfGgQ3JGu7Wpdaj-Z7zLcvJ/preview"></iframe>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/31/audio_d8f399f9e8.mp3?filename=eternal-love-ambient-piano-10771.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+
+  <script>
+    function showLetter() {
+      document.getElementById('letter').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('letter').offsetTop - 40, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
